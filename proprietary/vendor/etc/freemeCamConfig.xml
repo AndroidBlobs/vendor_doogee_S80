@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <!-- face beauty grade default,the value can be configed 0: NATURAL,1:CLASSIC,2:EXTREME,3:CUSTOM-->
+ <Param name="FACE_BEAUTY_GRADE_DEFAULT" value="1" />
+ <!-- camera preview retio default,the value can be configed 4x3 or 16x9-->
+ <Param name="CAMERA_PICTURESIZE_BACK_DEFAULT" value="4x3" />
+ <Param name="CAMERA_PICTURESIZE_FRONT_DEFAULT" value="4x3" />
+ <!-- camera mode default,the value can be configed 0:NORMAL,1:PANORAMA,2:HDR,3:NIGHT,4:FACE BEAUTY-->
+ <Param name="CAMERA_MODE_BACK_DEFAULT" value="0" />
+ <Param name="CAMERA_MODE_FRONT_DEFAULT" value="0" />
+ <!-- camera resource center default,the value can be configed on or off-->
+ <Param name="CAMERA_RESOURCE_CENTER_DEFAULT" value="on" />
+ <!-- camera update setting default,the value can be configed on or off-->
+ <Param name="UPDATE_SETTING_DEFAULT" value="on" />
+ <!-- camera fake focus default,the value can be configed yes or no-->
+ <Param name="FAKE_FOCUS_DEFAULT" value="no" />
+ <!-- camera gesture shot menu show default,the value can be configed true or false-->
+ <GeneralParamMap name ="CAMERA_GESTURESHOT_SHOW_MENU" value="false" />
+ <!-- camera gesture shot default,the value can be configed true or false-->
+ <Param name="CAMERA_GESTURESHOT_DEFAULT" value="false" />
+ <!-- camera zsd on default,the value can be configed on or off-->
+ <Param name="CAMERA_ZSDON_DEFAULT" value="on" />
+ <!-- camera back plugin pose show,the value can be configed true or false-->
+ <Param name="CAMERA_PLUGIN_POSE_SHOW" value="false" />
+ <!-- camera back plugin child show,the value can be configed true or false-->
+ <Param name="CAMERA_PLUGIN_CHILD_SHOW" value="true" />
+ <!-- camera back plugin watermark show,the value can be configed true or false-->
+ <Param name="CAMERA_PLUGIN_WATERMARK_SHOW" value="true" />
+ <!-- camera back plugin filmmode show,the value can be configed true or false-->
+ <Param name="CAMERA_PLUGIN_FILMMODE_SHOW" value="true" />
+ <!-- camera front plugin child show,the value can be configed true or false-->
+ <Param name="CAMERA_FRONT_PLUGIN_CHILD_SHOW" value="true" />
+ <!-- camera face beauty show,the value can be configed true or false-->
+ <Param name="CAMERA_FACE_BEAUTY_SHOW" value="false" />
+ <!-- camera front face beauty show,the value can be configed true or false-->
+ <Param name="CAMERA_FRONT_FACE_BEAUTY_SHOW" value="false" />
+ <!-- camera photo mirror,the value can be configed on or off-->
+ <Param name="CAMERA_PHOTO_MIRROR_DEFAULT" value="on" />
+
+
+ <!-- camera location switch: on is default open,off is default close -->
+ <Param name="CAMERA_LOCATION_SWITCH" value="off" />
+ <!-- camera flash status: auto off on is valid value-->
+ <Param name="CAMERA_FLASH_STASTUS" value="auto" />
+ <!-- camera torch status: off torch is valid value-->
+ <Param name="CAMERA_TORCH_STASTUS" value="off" />
+ <!-- camera guide switch:on is default open,off is default close -->
+ <Param name="CAMERA_GUIDE_SWITCH" value="on" />
+ <!-- camera brightness level: 0.0 ~ 1.0 is valid values,notice no custom is auto,default no custom -->
+ <!-- <Param name="CAMERA_BRIGHTNESS_LEVEL" value="1.0" /> -->
+ <!-- gallery brightness level: 0.0 ~ 1.0 is valid values,notice no custom is auto,default no custom -->
+ <!-- <Param name="GALLERY_BRIGHTNESS_LEVEL" value="1.0" /> -->
+ <!-- gallery zoom level: 1.0 ~ 2.0 is valid values,notice no custom is auto,default no custom -->
+ <Param name="GALLERY_ZOOM_LEVEL" value="2.0" />
+ <!-- camera picture quality,the value can be configed full:100,high:95,medium:85,low:75-->
+ <Param name="CAMERA_PICTURE_QUALITY" value ="high" />
+ <!-- camera continous shot open default,the value can be configed on or off-->
+ <Param name="CAMERA_CONTINUE_DEFAULT" value ="on" />
+ <!-- camera continous shot num default,the value can be configed a int value -->
+ <Param name="CAMERA_CONTINUE_NUM_DEFAULT" value ="20" />
+ <!-- camera continous backgroud virtual support,default value false,generally is used for dual camera -->
+ <Param name="CAMERA_BACKGROUND_VIRTUAL_SUPPORT" value ="true" />
+ <!-- camera focus sound show,the value can be configed true or false-->
+ <Param name="CAMERA_FOCUS_SOUND_SHOW" value="false" />
+ <!-- camera back video size default ,the value can be config large, medium, small -->
+ <Param name="CAMERA_BACK_VIDEOSIZE_DEFAULT" value = "large" />
+ <!-- camera front video size default ,the value can be config large, medium, small -->
+ <Param name="CAMERA_FRONT_VIDEOSIZE_DEFAULT" value = "large" />
+ <!-- camera custom picture show size begin -->
+ <!-- <PictureSizeMap name="2560x1920" value = "8" />
+ <PictureSizeMap name="2560x1440" value = "8" /> -->
+ <!-- camera custom picture show size end -->
+ <!--camera general parameters config -->
+ <GeneralParamMap name ="CAMERA_FLASH_TORCH_SHOW" value="false" />
+ <GeneralParamMap name ="CAMERA_HDR_SHOW" value="true" />
+ <GeneralParamMap name ="CAMERA_FACE_DETECTION_SHOW" value="true" />
+ <GeneralParamMap name ="PHYSIOGNOMY_MODE_SUPPORT" value="false" />
+ <GeneralParamMap name ="FRONT_CAMERA_SUPPORT_BV" value="false" />
+ <GeneralParamMap name ="CAMERA_SHUTTER_DEFAULT" value="true" />
+ <GeneralParamMap name ="CAMERA_FFB_SUPPORT" value="true" />
+ <GeneralParamMap name ="GOTO_FREEME_GALLERY" value="false" />
+ <GeneralParamMap name ="IKO_USE_SPECIFIED_BROWSER_PKG" value="com.ume.browser" />
+
+ <!--this is true dual camera,CAMERA_BACKGROUND_VIRTUAL_SUPPORT can't set true togethor -->
+ <GeneralParamMap name ="SDOF_MODE_SUPPORT" value="false" />
+ <!-- sdof
+    {"F11", "F10","F9.0", "F8.0", "F7.2", "F6.3", "F5.6", "F4.5", "F3.6", "F2.8",
+      "F2.2", "F1.8", "F1.4", "F1.2", "F1.0", "F0.8"}
+ SDOF_LEVEL_DEFAULT is this array's index
+ -->
+ <GeneralParamMap name ="SDOF_LEVEL_DEFAULT" value="13" />
+
+</root>

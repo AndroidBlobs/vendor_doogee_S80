@@ -1,0 +1,5 @@
+on boot
+# talkie
+    chmod 0666 /dev/ttyMT1
+    chmod 0666 /dev/hctintercom_node
+

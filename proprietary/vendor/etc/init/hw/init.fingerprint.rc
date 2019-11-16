@@ -1,0 +1,50 @@
+on boot
+    #add for sunwave fingerprint
+    chown system system /dev/sunwave_fp
+    chmod 0660          /dev/sunwave_fp
+
+    #add for goodix fingerprint
+    chown system system /dev/goodix_fp
+    chmod 0660          /dev/goodix_fp
+
+    #add for chipsailing fingerprint
+    chown system system /dev/cs_spi
+    chmod 0666 /dev/cs_spi
+
+service btlfpserver /vendor/bin/hw/btlfpserver
+    class late_start
+    user root
+
+
+on post-fs-data
+    #add for microarray fingerprint
+    chmod 777 dev/madev0
+    chwon system system dev/madev0
+    mkdir /data/system/ma_fingerprint 0700  system  system
+
+    # add for fpsensor fingerprint
+    chmod 660 /dev/fpsensor
+    chown system system /dev/fpsensor
+    mkdir /data/fpsensor
+    chown system system /data/fpsensor
+    chmod 660 /data/fpsensor/socket
+    chown system system /data/fpsensor/socket
+
+    # add for blestech fingerprint
+    chown system system /dev/blfp
+    chmod 0666	/dev/blfp
+    chmod 0666 /dev/blestech_fp
+    chmod 0666 /sys/bl_fingerprint_sysfs/screenstate
+    chmod 0666 /sys/bl_fingerprint_sysfs/workstate
+    mkdir /data/system/blfp 0700 system  system
+    
+    # add for cdfinger fingerprint
+    chown system system /dev/fpsdev0
+    chmod 0666 /dev/fpsdev0
+    
+    #add for chipsailing fingerprint
+    chmod 0755 /vendor/bin/hw/vendor.chipsailing.fingerprint@1.0-service
+    service cs_fp_hw /vendor/bin/hw/vendor.chipsailing.fingerprint@1.0-service
+    class late_start
+    user system
+    group system input
